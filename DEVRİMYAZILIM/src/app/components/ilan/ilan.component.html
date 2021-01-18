@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+        <h2>DEVRİM YAZILIM</h2>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="paylasilanlar">Paylaşılan İlanlar <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item  active ">
+                <a class="nav-link" href="ilan">İlan Paylaş</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="">Çıkış</a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+<div class="row">
+    <div class="container mt-5">
+
+        <form #frm="ngForm">
+            <div class="card col-md-6 float-left">
+
+                <div class="card-header">
+                    <h1 class="text-center">İlan Paylaş</h1>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <input type="text" name="isalanı" placeholder="İş Alanı" class="form-control"
+                            [(ngModel)]="seckayit.isalani">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="pozisyon" placeholder="Pozisyon" class="form-control"
+                            [(ngModel)]="seckayit.pozisyon">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" name="tecrube" placeholder="Tecrübe" class="form-control"
+                            [(ngModel)]="seckayit.tecrube">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-success btn-block" value="Paylaş" (click)="this.Kaydet()">
+                        <br>
+                        {{this.yazi}}
+                    </div>
+
+                    <br>
+                </div>
+
+                <div class="card-footer text-right">Devrim Yazılım</div>
+            </div>
+
+        </form>
+    </div>
+
+</div>
